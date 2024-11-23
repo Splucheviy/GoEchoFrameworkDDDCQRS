@@ -8,3 +8,19 @@ app:
        debug: true
        hide_banner: false
        hide_port: false
+zap:
+ cores:
+   console:
+     type: stream
+     level: info
+     encoding: console
+     time_encoder: iso8601
+   file:
+     type: "file"
+     encoding: json
+     time_encoder: iso8601
+     file:
+       path: "/var/log/myapp"
+       max_backups: 7
+       max_age: 30
+       max_size: 32
